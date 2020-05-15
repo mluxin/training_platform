@@ -25,4 +25,6 @@ Route::get('/trainee', 'TraineeController@index')->name('trainee');
 Route::post('/add_trainee', 'TraineeController@add_trainee')->name('add_trainee');
 
 Route::get('/teacher', 'TeacherController@index')->name('teacher');
+Route::post('/add_teacher', 'TeacherController@add_teacher')->name('add_teacher');
+
 Route::get('/training', 'TrainingController@index')->name('training');

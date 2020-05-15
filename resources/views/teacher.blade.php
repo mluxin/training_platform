@@ -14,26 +14,18 @@
                         </div>
                     @endif
 
-                    <form method="POST" action="/add_trainee">
-                        @csrf
-                        <label for="name">Name : </label>
-                          <input id="name" type="text" class="@error('name') is-invalid @enderror">
-                        <label for="name">Surname : </label>
-                          <input id="surname" type="text" class="@error('surname') is-invalid @enderror">
-                        <button type="submit">Create new trainee </button>
-                    </form>
-
-                    {!! Form::open(['url' => 'add_trainee']) !!}
+                    {!! Form::open(['url' => 'add_teacher']) !!}
                       Name : {!! Form::text('name') !!}
                       Surname : {!! Form::text('surname') !!}
-                        {!! Form::submit('Create a new trainee') !!}
+                      Hour : {!! Form::text('hour') !!}
+                        {!! Form::submit('Create a new teacher') !!}
                     {!! Form::close() !!}
                     <br/>
-                    Trainees recorded :
+                    Teacher recorded :
                     <ul>
-                      @foreach ($trainees as $trainee)
+                      @foreach ($teachers as $teacher)
                       <li>
-                          {{ $trainee->name }} {{ $trainee->surname }}
+                          {{ $teacher->name }} {{ $teacher->surname }}
                       </li>
                       @endforeach
                     </ul>

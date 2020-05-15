@@ -8,7 +8,7 @@ use App\Trainee;
 class TraineeController extends Controller
 {
     /**
-     * Show the list.
+     * Show Trainee list.
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
@@ -25,7 +25,7 @@ class TraineeController extends Controller
      */
     public function add_trainee(Request $request)
     {
-       $trainee = new Trainee;
+        $trainee = new Trainee;
         $trainee->name = $request->name;
         $trainee->surname = $request->surname;
         $trainee->save();
