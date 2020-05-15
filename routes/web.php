@@ -20,3 +20,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/trainee', 'TraineeController@index')->name('trainee');
+Route::post('/add_trainee', 'TraineeController@add_trainee')->name('add_trainee');
+
+Route::get('/teacher', 'TeacherController@index')->name('teacher');
+Route::get('/training', 'TrainingController@index')->name('training');
